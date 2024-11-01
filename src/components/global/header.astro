@@ -1,0 +1,37 @@
+<header class="bg-colorPrimario fixed w-full z-[9999999999999999]">
+    <nav>
+        <div class="flex flex-row gap-10 items-center justify-between w-[85%] m-auto py-6">
+            <div class="flex items-center justify-center gap-10">
+                <img src="logo.webp" alt="logo" class="h-10 cursor-pointer">
+                <ul class="flex items-center justify-center gap-10 text-[#95969b] text-[1.2rem]">
+                <li><a href="#" class="linkHeader">Inicio</a></li>
+                <li><a href="#" class="linkHeader">Peliculas</a></li>
+                <li><a href="#" class="linkHeader">Filtrar</a></li>
+                </ul>
+                <div>
+                    <img src="estrella.webp" alt="star" class="h-5 cursor-pointer" id="estrellaFavorito">
+                </div>
+            </div>
+            <div class="flex items-center justify-center gap-5" id="buscar">
+               
+                <div class="flex items-center justify-center gap-5 rounded-[1.5rem] py-2 px-7 bg-[#95969b2e]">
+                    <label for="buscar"><img src="buscar.webp" alt="search" class="h-5 cursor-pointer"></label>
+                    <input type="text" name="" id="buscar" placeholder="Buscar pelicula" class="bg-transparent border-none outline-none  text-white text-[1rem]">
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    const linkHeader = document.querySelectorAll('.linkHeader');
+
+    linkHeader.forEach(link => {
+        link.addEventListener('mouseover', ()=> {
+            link.style.color = '#f2f2f2';
+        })
+        link.addEventListener('mouseout', ()=> {            
+            link.style.color = '#95969b';
+        })
+    });
+</script>
